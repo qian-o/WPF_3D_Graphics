@@ -35,18 +35,18 @@ public partial class MainWindow : Window
         Scene.AddModel(_pointLight3);
 
         Scene.AddDirectionalLight(Color.FromRgb(232, 222, 196), new System.Windows.Media.Media3D.Vector3D(1, -1, 1));
-        Scene.AddPointLight(Colors.Red, new System.Windows.Media.Media3D.Point3D(0, 1, -1.505f));
-        Scene.AddPointLight(Colors.Green, new System.Windows.Media.Media3D.Point3D(-1.505f, 1, 0.0));
-        Scene.AddPointLight(Colors.Blue, new System.Windows.Media.Media3D.Point3D(1.505f, 1, 0.0));
+        Scene.AddPointLight(Colors.Red, new System.Windows.Media.Media3D.Point3D(0, 1.505f, -1.0f));
+        Scene.AddPointLight(Colors.Green, new System.Windows.Media.Media3D.Point3D(-1.0f, 1.505f, 0.0));
+        Scene.AddPointLight(Colors.Blue, new System.Windows.Media.Media3D.Point3D(1.0f, 1.505f, 0.0));
     }
 
     private void Scene_Update(object arg1, TimeSpan arg2)
     {
         _plane.Transform = Matrix4X4.CreateScale(10000.0f);
         _cube.Transform = Matrix4X4.CreateTranslation(0.0f, 0.505f, 0.0f);
-        _pointLight1.Transform = Matrix4X4.CreateScale(0.1f) * Matrix4X4.CreateTranslation(0.0f, 1.505f, -1.505f);
-        _pointLight2.Transform = Matrix4X4.CreateScale(0.1f) * Matrix4X4.CreateTranslation(-1.505f, 1.505f, 0.0f);
-        _pointLight3.Transform = Matrix4X4.CreateScale(0.1f) * Matrix4X4.CreateTranslation(1.505f, 1.505f, 0.0f);
+        _pointLight1.Transform = Matrix4X4.CreateScale(0.1f) * Matrix4X4.CreateTranslation(0.0f, 1.505f, -1.0f);
+        _pointLight2.Transform = Matrix4X4.CreateScale(0.1f) * Matrix4X4.CreateTranslation(-1.0f, 1.505f, 0.0f);
+        _pointLight3.Transform = Matrix4X4.CreateScale(0.1f) * Matrix4X4.CreateTranslation(1.0f, 1.505f, 0.0f);
     }
 
     private static ImageBrush GetTex(string path)
